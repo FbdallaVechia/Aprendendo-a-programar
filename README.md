@@ -1,5 +1,4 @@
 # Aprendendo-a-programar
 ## O início de uma jornada!
-*Hello World* 
-> Todo curso tem essa...
-
+*Hello World* [^1]
+[^1]: Todo curso tem essa 🎱
