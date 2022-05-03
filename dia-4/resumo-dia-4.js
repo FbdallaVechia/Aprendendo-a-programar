@@ -7,82 +7,82 @@
 Abaixo um exemplo de mapa:
     */
 
-// let pessoa = {
-//     'nome': "Fabio Dalla Vechia",
-//     'idade': 33,
-//     'temIngresso': true
-// }
-// console.log(pessoa.nome)
+let pessoa = {
+    'nome': "Fabio Dalla Vechia",
+    'idade': 33,
+    'temIngresso': true
+}
+console.log(pessoa.nome)
 // Para chamar uma chave do mapa é só usar o nome da variável e um ponto "." seguido do nome da chave.
 
 /* Como avaliar duas condições ao mesmo tempo?
 -- o Comando && - significa "e"
 -- o Comando || - significa "ou"
 */
-// if (pessoa.idade >= 18 && pessoa.temIngresso == true){
-//     console.log("Pode entrar")
-// } else {
-//     console.log("Não pode entrar")
-// }
+if (pessoa.idade >= 18 && pessoa.temIngresso == true){
+    console.log("Pode entrar")
+} else {
+    console.log("Não pode entrar")
+}
 
 /*Função é um bloco de códigos que podemos reutilizar - ao invés de ficar repetindo linhas de códigos.
 Pode pôr vários parâmetro na função. E depois executar varias.
 */
 
-// function imprimirNome(nome, idade) {
-//     console.log(nome)
-//     console.log(idade)
-// }
+function imprimirNome(nome, idade) {
+    console.log(nome)
+    console.log(idade)
+}
 
-// imprimirNome("Fabio da func", "33 anos")
-// imprimirNome("Outra coisa", "31 anos")
+imprimirNome("Fabio da func", "33 anos")
+imprimirNome("Outra coisa", "31 anos")
 
 // A função pode retornar um dado! Uma variável recebe o que veio da função!
 
-// function retornarNome (nome) {
-//     return nome
-// }
+function retornarNome (nome) {
+    return nome
+}
 
-// let nomeRecebidodaFuncao = retornarNome ("Retorno Fabio Dalla Vechia")
-// console.log(nomeRecebidodaFuncao)
+let nomeRecebidodaFuncao = retornarNome ("Retorno Fabio Dalla Vechia")
+console.log(nomeRecebidodaFuncao)
 
-// function tirarMedia (numero_a, numero_b) {
-//     let soma = numero_a + numero_b
-//     let media = soma / 2
-//     return media
-// }
+function tirarMedia (numero_a, numero_b) {
+    let soma = numero_a + numero_b
+    let media = soma / 2
+    return media
+}
 
-// let mediaRecebidadaFuncao = tirarMedia (100, 50)
-// console.log(mediaRecebidadaFuncao)
+let mediaRecebidadaFuncao = tirarMedia (100, 50)
+console.log(mediaRecebidadaFuncao)
 
 // criando uma função com arrow function
 
-// const tirarMedia_arrow = (numero_a, numero_b) => {
-//     let soma = numero_a + numero_b
-//     let media = soma / 2
-//     return media
-// }
-// console.log(tirarMedia_arrow(200, 600))
+const tirarMedia_arrow = (numero_a, numero_b) => {
+    let soma = numero_a + numero_b
+    let media = soma / 2
+    return media
+}
+console.log(tirarMedia_arrow(200, 600))
 
 console.log("RESOLVENDO UM PROBLEMA COM FUNÇÕES")
 
 // para não ter que repetir várias vezes a condição, se cria uma função
 
-// let pessoaA = {'temIngresso': true, 'idade': 30, 'nome': "Tiago Sestari"}
-// let pessoaB = {'temIngresso': false, 'idade': 20, 'nome': "José Alfonso"}
-// let pessoaC = {'temIngresso': true, 'idade': 15, 'nome': "Ana Maria"}
+let pessoaA = {'temIngresso': true, 'idade': 30, 'nome': "Tiago Sestari"}
+let pessoaB = {'temIngresso': false, 'idade': 20, 'nome': "José Alfonso"}
+let pessoaC = {'temIngresso': true, 'idade': 15, 'nome': "Ana Maria"}
 
-// function podeEntrar (idade, ingresso) {
-//     if (idade >= 18 && ingresso == true) {
-//         console.log("Pode Entrar")
-//     } else {
-//         console.log("Não Pode Entrar")
-//     }
-// }
+function podeEntrar (idade, ingresso) {
+    if (idade >= 18 && ingresso == true) {
+        console.log("Pode Entrar")
+    } else {
+        console.log("Não Pode Entrar")
+    }
+}
 
-// podeEntrar(pessoaA.idade, pessoaA.temIngresso)
-// podeEntrar(pessoaB.idade, pessoaB.temIngresso)
-// podeEntrar(pessoaC.idade, pessoaC.temIngresso)
+podeEntrar(pessoaA.idade, pessoaA.temIngresso)
+podeEntrar(pessoaB.idade, pessoaB.temIngresso)
+podeEntrar(pessoaC.idade, pessoaC.temIngresso)
 
 /* Iterar é repetir estruturas de código. Algumas situações vão exigir uma repetição de comandos até que uma condição seja atingida! Usando ForLoops:
 No forLoops temos uma variável que será o contador. O comando vai se repetir até que o contador chegue em um número desejado.
@@ -117,16 +117,16 @@ let alunos = [
 // }
 
 // // exerc.: 2)
-// let quantidadeDeAlunos = 0
-// for (let aluno_b of alunos) {
-//     if (aluno_b.fezProva == true){
-//       //  quantidadeDeAlunos = quantidadeDeAlunos + 1
-//       // quantidadeDeAlunos ++
-//       quantidadeDeAlunos += 1
-//     }
-// }
-
-// console.log("A quantidade de alunos que fizeram prova é: ", quantidadeDeAlunos)
+let quantidadeDeAlunos = 0
+for (let aluno_b of alunos) {
+    if (aluno_b.fezProva == true){
+      //  quantidadeDeAlunos = quantidadeDeAlunos + 1
+      // quantidadeDeAlunos ++
+      quantidadeDeAlunos += 1
+    }
+}
+    
+console.log("A quantidade de alunos que fizeram prova é: ", quantidadeDeAlunos)
 
 // métodos são "funções" que já existem no javascript, usa-se assim: variável.nomedoMetodo() *** metodo foreach ** uma função pode chamar outra função!!! 
 // o parâmetro do método forEach é chamar outra função que será executada para cada item da lista.

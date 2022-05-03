@@ -106,3 +106,40 @@ let receita = [
 //Exercício 3: Quantas vendas foram abaixo de 50 reais?
 
 //COLOQUE SUA SOLUÇÃO ABAIXO
+
+// 1)
+
+// let vendasSG = 0
+// for (let somaValor of receita.values(valor)){
+//     vendasSG = somaValor + vendasSG
+// }
+
+// console.log(vendasSG)
+
+// resolvendo o problema
+
+// let valorTotal
+// for (item of receita) {
+//     valorTotal = item.valor
+// }
+
+// console.log(valorTotal)
+// só exibe o ultimo valor
+
+// let valorTotal = 0 
+// for (item of receita) {
+//     valorTotal = item.valor + valorTotal
+// }
+
+// console.log(valorTotal)
+
+// o "for" itera sobre a variável criada -> valorTotal"
+// dentro do parametro, item é uma variavel necessaria
+
+let valorTotal = 0 
+for (item of receita) {
+    valorTotal = item.valor + item.gorjeta + valorTotal
+}
+
+console.log(valorTotal)
+
