@@ -138,8 +138,49 @@ let receita = [
 
 let valorTotal = 0 
 for (item of receita) {
-    valorTotal = item.valor + item.gorjeta + valorTotal
+    valorTotal = item.valor +    valorTotal
 }
 
 console.log(valorTotal)
 
+
+// 2)
+let valorTotalcomGorjeta = 0 
+for (item of receita) {
+    valorTotalcomGorjeta = item.valor + item.gorjeta + valorTotalcomGorjeta
+}
+
+console.log(valorTotalcomGorjeta)
+
+//3)
+let vendaAbaixode50 = 0
+for (item of receita) {
+    if (item.valor < 50) {
+        vendaAbaixode50 ++
+        console.log(vendaAbaixode50)
+    }
+}
+
+
+// Exercicio 2
+
+function legalAgeOrNot (age) {
+    if (age >= 18) {
+        console.log("A idade é maior ou igual a 18 anos. Pode entrar na boate.")
+    } else {
+        console.log("A idade é menor que 18 anos, entrada não permitida!")
+    }
+    // escreva aqui a solução de código que verifica se a idade da pessoa é maior ou não que 18 anos.
+    // Se for maior ou igual, você deve exibir na tela "A idade é maior ou igual a 18 anos. Pode entrar na boate.".
+    // Se for menor, você deve exibir na tela "A idade é menor que 18 anos, entrada não permitida!"
+}
+
+let age1 = 13
+let age2 = 18
+let age3 = 20
+
+// chame a função legalAgeOrNot que você construiu logo abaixo deste comentário para cada uma das idades em age1, age2, age3.
+
+legalAgeOrNot(age1)
+legalAgeOrNot(age2)
+legalAgeOrNot(age3)
