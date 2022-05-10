@@ -1,4 +1,4 @@
 # Aprendendo-a-programar
-## O início de uma jornada!
+## Concentos básicos e aplicações para o aprendizado!
 *Hello World* [^1]
 [^1]: Todo curso tem essa 🎱
