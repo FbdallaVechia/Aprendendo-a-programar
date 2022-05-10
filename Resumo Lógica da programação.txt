@@ -1,0 +1,74 @@
+**VARIÁVEL**
+
+É um espaço reservado na memória do computador para guardar um tipo de informação. Variáveis devem receber nomes para poder servir de referência e serem alteradas quando necessário. Por isso devem ser declaradas antes de serem usadas. Mesmo que uma variável assuma diferentes valores, ela só poderá armazenar um valor por vez.
+
+Para se declarar uma variável é necessária criar um identificador, que será o nome da variável no algoritimo:
+	- VAR<nome_da_variavel> : <tipo_da_variavel>
+			ou
+	- VAR<lista_de_variaveis> : <tipo_das_variaveis>
+
+Numa mesma linha pode-se determinar uma ou mais variáveis do mesmo tipo, e para isso os nomes devem ser separados por vírgula. Se as variáveis forem diferentes, devem ser declaradas em linhas também diferentes.
+
+A diferença entre caractere e cadia de caracteres -> para um caractere usa-se 'aspas simples' e para uma cadeia de caracteres "aspas duplas"
+
+**TIPOS DE DADOS**
+
+Os tipos de dados mais comuns são conhecidos como tipos primitivos, como:
+	- Inteiros: são os dados numéricos positivos ou negativos, eliminando-se destes qualquer número fracionário;
+	- Reais: São os dados numpericos positivos, negativos e números fracionários;
+	- Caracteres: são as sequências, que devem ser mostradas entre "aspas". Caracteres são conhecidos também como alfanuméricos, string, literal ou cadeia;
+	- Lógicos: São os dados com valor verdadeiro ou falso, podendo ser representados apenas por um dos dois valores. Também nomeados de "tipo booleano". 
+
+**CONSTANTES**
+
+Seus dados são fixos e não se alteram ao longo da execução de um programa. Geralmente a constante é definida no início do programa e sua utilização acontece no decorrer dele.
+
+**COMANDOS DE ATRIBUIÇÃO**
+
+**OPERADORES**
+
+Os operadores são meios pelos quais comparamos, incrementamos, decrementamos e avaliamos dados dentro do computador. Existem três tipos de operadores, que são: 
+	- Operadores aritméticos: expressões podem ser usadas tanto para variáveis quanto para constantes. Seguem sempre a hierarquia:
+		1º: parenteses;
+		2º: exponenciação;
+		3º: multiplicação, divisão (o que vier primeiro);
+		4º: + ou - (o que vier primeiro).
+
+	- Operadores relacionais: usados para comparar string de caracteres e números, sendo que os objetos devem ser da mesma naturaza e as variáveis do mesmo tipo de dado. Eles são operadores binários e geralmente retornam valores lógicos (verdadeiro ou falso).
+
+	- Operadores lógicos: são utilizados para combinar expressões relacionais. Estabelecem a conexão para a formação de novas proposições e também retornam como resultado valores lógicos verdadeiro ou falso.
+		- AND: e (conjunção), é verdadeira se todas as condições forem verdadeiras;
+		- OR: ou (disjunção), é veradeira se pelo menos uma condição for verdadeira
+		- NOT: não (negação), inverto o valor da expressão ou condição. Se falsa, inverte para verdadeira e vice-versa.
+
+**FUNÇÕES**
+
+Têm uma especialidade de retornar ao programa que as chamou um valor associado ao nome da função.
+
+**ESTRUTURAS PARA A CONSTRUÇÃO DE ALGORITMOS**
+
+	- Sequenciação: conjunto de comandos que serão executados da mesma maneira que a escrita, numa sequência linear de cima para baixo e da esquerada para direita, uma de cada vez e que contenha praticamente comandos de atribuição, entrada e saída.
+
+	- Decisão (seleção ou condição): tem que ser utilizada quando existe a necessidade de testar alguma condição, que trará um conjunto de ações a serem executadas a partir do resultado. Ela pode ser simples (SE/ENTÃO), composta (SE/ENTÃO/SENÃO), encadeada (SE/ENTÃO/SENÃO/SE/ENTÃO/SENÃO), múltipla (CASO/SELECIONE).
+		- SIMPLES -> utilizada quando se necessita testar uma condição antes de executar um comando;
+		- COMPOSTA -> apenas uma condição é avaliada e um comando ou um conjunto de comandos será executado;
+		- ENCADEADAS -> ou aninhada, é usada quando se faz diversas comparações sempre com a mesma variável. Os comandos que fazem parte do bloco {VERDADEIRO} ou {FALSO} também podem ser uma estrutura de seleção e testar mais de uma condição. Como vantagem essa estrutura torna o algoritmo mais rápido e com um menor número de passos para se chegar ao final dele.
+		- MÚLTIPLA -> usada para testar a condição, numa única expressão, que gera um resultado, ou valor de uma variável, que se encontra guardado num determinado conteúdo. Por exemplo, a estrutura é testada num primeiro comando e, caso seja verdadeira, executa-o, e caso seja falso, a próxima condição é testada. Caso todas as condições sejam falsas, pode-se usar um SENÃO na estrutura, que pode ser dispensado também. 
+
+	- Repetição: aceita que uma sequência de comandos seja executada em um determinado número de vezes até que certa condição seja satisfeita. Tais estruturas são chamadas de laços ou loops. Os laços dividem-se em laços contados e laços condicionais. 
+		- LAÇOS CONTADOS -> repetição com variável de controle. São usados quando se tem uma prévia de quantas vezes o comando composto no interior da construção será executado.
+		- LAÇOS CONDICIONAIS -> não é necessário saber o número de vezes que o conjunto de comandos do interior do laço se repetirá, pois está sujeito a uma condição imposta ao laço.
+
+Devido ao uso de estruturas de repetção para a preparação de algoritmos, é preciso utilizar dois tipos de variáveis para a resolução de diversos tipos de problemas, como variáveis acumuladoras e variáveis contadoras.
+
+	- VARIÁVEL ACUMULADORA: na maioria das vezes é a variável utilizada na estrutura de controle. Esta variável recebe um valor inicial, normalmente o zero antes do início de uma estrutura de repetição, e é incrementada (ou decrementada) no interior da estrutura de um valor variável.
+	- VARIÁVEL CONTADORA: é aquela que recebe um valor inicial, normalmente o zero antes do início de uma estrutura de repetição, sendo incrementada no interior da estrutura por um valor constante, na maioria das vezes 1.
+
+**LAÇOS CONDICIONAIS**
+
+Uma sequência de comandos será executada no seu interior até que uma determinada condição seja satisfeita.
+As construções que implementas laços condicionais são:
+	- Enquanto: laço condicional com teste no início;
+	- Repita: laço condicional com teste no final.
+
+A variável que é testada, tanto no início quanto no final, terá que estar associada sempre a um comando que faça a atualização no interior do laço. Se isso não acontecer, o programa repetirá indefinidamente este laço, causando uma situação que se chama laço infinito. 
