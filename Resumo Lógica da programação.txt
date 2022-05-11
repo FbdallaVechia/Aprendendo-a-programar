@@ -72,3 +72,18 @@ As construções que implementas laços condicionais são:
 	- Repita: laço condicional com teste no final.
 
 A variável que é testada, tanto no início quanto no final, terá que estar associada sempre a um comando que faça a atualização no interior do laço. Se isso não acontecer, o programa repetirá indefinidamente este laço, causando uma situação que se chama laço infinito. 
+
+**LAÇO CONDICIONAL COM TESTE NO INÍCIO**
+
+Esse tipo de laço realiza um teste lógico em seu início, cenferindo se é aceitável ou não executar o conjunto de comandos no seu interior. Caso o resultado do teste seja VERDADEIRO, o laço é executado, retornando outra vez ao teste lógico e, desse modo, o processo será repetido enquanto a condição examinada for verdadeira. Quando o resultado da condição for FALSO, será executada a instrução ou o bloco de instruções do fim. A execução apenas deixará o laço quando a condição for falsa. Isso deve ser compreendido para que não haja um laço infinito.
+
+**LAÇO CONDICIONAL COM TESTE NO FINAL**
+
+A principal característica desta estrutura é que a instrução ou o bloco verdade será efetuado pelo menos uma vez, independente do resultado da condição. Ou seja, o laço é executado e então conferido se é aceitável ou não executar outra vez o conjunto de comandos em seu interior. 
+O comando é executado uma vez, na sequência a condição é testada. Caso ela seja FALSA, novamente o comando é executado e este procedimento se repete até que a condição seja VERDADEIRA, e com isso a execução segue pelo comando imediatamente seguinte ao final da construção.
+
+A estrutura REPITA se difere da ENQUANTO pelo fato de ser executada uma ou mais vezes (pelo menos uma), ao mesmo tempo que na outra estrutura o comando é executado zero ou mais vezes (provavelmente nenhuma). Para a inicialização da variável, a construção REPITA pode ser lida dentro do laço, diferente da ENQUANTO.
+
+** LAÇOS CONTADOS OU REPETIÇÃO COM VARIÁVEL DE CONTROLE**
+
+A principal característica deste tipo de estrutura é que se deve saber com antecipação o número de vezes em que a instrução ou bloco verdade se repetirá. Para isso atribui-se um valor numérico inicial à variável e faz-se uma comparação deste com um valor numérico final. Enquanto essa condição não acontecer, o bloco de comandos é executado e o valor da variável inicial é incrementado (ou decrementado), conforme valor prédefinido. Quando não pe definido um valor de incremento, automaticamento o valor assumido é +1.

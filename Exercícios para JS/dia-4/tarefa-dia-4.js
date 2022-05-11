@@ -138,7 +138,7 @@ let receita = [
 
 let valorTotal = 0 
 for (item of receita) {
-    valorTotal = item.valor +    valorTotal
+    valorTotal = item.valor + valorTotal
 }
 
 console.log(valorTotal)
