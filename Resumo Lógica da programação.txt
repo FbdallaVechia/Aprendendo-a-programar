@@ -87,3 +87,127 @@ A estrutura REPITA se difere da ENQUANTO pelo fato de ser executada uma ou mais 
 ** LAÇOS CONTADOS OU REPETIÇÃO COM VARIÁVEL DE CONTROLE**
 
 A principal característica deste tipo de estrutura é que se deve saber com antecipação o número de vezes em que a instrução ou bloco verdade se repetirá. Para isso atribui-se um valor numérico inicial à variável e faz-se uma comparação deste com um valor numérico final. Enquanto essa condição não acontecer, o bloco de comandos é executado e o valor da variável inicial é incrementado (ou decrementado), conforme valor prédefinido. Quando não pe definido um valor de incremento, automaticamento o valor assumido é +1.
+
+
+												___---------*****DADOS*****---------___
+
+**CONSISTÊNCIA DE DADOS**
+
+É a verificação se um dado é válido ou não, ou seja, se ele se encontra durante os limites estabelecidos. Essa conferência garante uma correta execução do algoritmo. Caso aconteça uma entrada errada de dados, o algoritmo terá que aceitar uma nova entrada até que os mesmos fiquem dentro das especificações necessárias. Para que isso ocorra pode-se usar uma estrutura de repetição com teste no final.
+
+**ARQUIVO DE DADOS**
+
+Dados ficam na memória apenas durante a execução de um diagrama, depois disso são perdidos. Arquivos de dados podem ser armazenados e manipulados. Para entender isso é importante o conhecimento de alguns conceitos.
+	- CAMPO: espaço reservado na memória para receber dados.
+	- REGISTRO: conjunto de campos.
+	- ARQUIVOS: conjunto de registros
+
+Para usar a estrutura de dados do tipo arquivo praticamos a utilização de operações simples, tais como: abrir, fechar, apagar, copiar e renomear.
+
+Ao abrir um arquivo é feita a leitura dos dados que estão em disco e realizada sua transferência para a memória. Essa transferência é realizada por registro. Quando aberto, o ponteiro é posicionado no primeiro registro.
+	(ARQUIVO, RESGISTRO): arquivo é o nome da variável do tipo de arquivo determinado previamente e registro é o nome da variável do tipo de registro determinado anteriormente. BOF-> Begin of file; EOF-> End of file.
+
+**ORGANIZANDO ARQUIVOS**
+
+O comando feito com registros em uma estrutura de dados do tipo arquivo é a inclusão de um novo registro, consulta de um registro do arquivo, alteração dos dados guardados no arquivo ou exclusão de um registro do arquivo.
+Pode-se acessar os dados de um arquivo de duas maneiras: 
+
+	- ACESSO SEQUENCIAL: quando não se sabe onde um registro se encontra no arquivo e procura-se do início ao fim com um comando sequancial.
+
+	- ACESSO RANDÔMICO OU DIRETO: é preciso saber sua posição física, por isso pode-se posicionar instantaneamente no registro sem ter que andar por todos os registros. Para isso é preciso que um campo do registro guarde o dado do número da posição física do registro dentro do arquivo. Tal campo é denominado CHAVE.
+		- CHAVE: a chave de um registro deve ser única, pois nunca dois registros diferentes poderão ter a mesma localização!
+
+**MANIPULAÇÃO DE REGISTROS**
+
+Utiliza-se, em lógica, o seguinte comando para colocar o apontador de registros onde a posição física seja igual a chave:
+	"Posicione (arquivo, chave);
+
+**ESTRUTURA DE DADOS HOMEGÊNEOS OU ARRAYS**
+
+Essas estruturas aceitam agrupar vários dados dentro de uma mesma variável. Elas recebem sempre o mesmo tipo de dado, por isso são conhecidas como estruturas homogêneas. São sinônimos: variáveis compostas, variáveis indexadas, variáveis subscritas, matrizes (bidimensional), arranjos, vetores (unidimensional), tabelas em memória ou arrays.
+
+**VETORES**
+
+Conjunto de variáveis no qual cada uma delas pode guardar um dado diferente, mas todas compartilham o mesmo nome. A esse nome são associados índices, que representam as posições do vetor. Um exemplo de como um vetor é visto na memória do computador:
+		v = |2|9|5|3|7|6|
+Cada elemento dos arrays pode ser referenciado por meio de índices:
+v[1]= 2
+v[3]= 5
+v[5]= 7
+
+**MATRIZES**
+
+Matrizes são estruturas de dados (arrays) que precisam de dois índices para individualizar um elemento do conjunto. O primeiro índice representa as linhas e o segundo as colunas.
+	m= |9 |8 |4 |7 |6 |
+	   |2 |7 |3 |2 |5 |
+	   |1 |4 |12|1 |2 |
+Cada elemento dos arrays pode ser referenciaso por meio de índices m [linha, coluna]= x
+m [1,4]= 7
+m [3,5]= 2 
+
+
+												___---------*****MUDULARIZAÇÃO*****---------___
+
+É um processo usado para tornar mais fácil a criação de programas maiores. É um método de programação que consiste em dividir o algoritmo complexo em várias partes pequenas com funções bem definidas, gerenciado por módulos ou subalgoritmos. A parte inicial é nomeada algoritmo principal e as outras partes subalgoritmos.
+
+Existem dias formas de subalgoritmos que são PROCEDIMENTO e FUNÇÃO.
+
+**PROCEDIMENTO**
+
+É um programa que para ser executado tem que ser chamado pelo algoritmo principal que o constitui ou por outro subalgoritmo. É um subalgoritmo que é ligado através da colocação do seu nome em qualquer lugar do programa. Quando o nome é localizado, acontece um desvio no programa para que os comandos do subalgoritmo sejam realizados. Quando ele é finalozado, a execução retornará ao ponto seguinte à chamada do procedimento. Também são utilizadas pelo procedimento todas as variáveis declaradas no início do programa. Exemplo:
+
+ALGORITMO Procedimento
+VAR
+	T, V, X : real
+Procedimento Soma
+INÍCIO
+	X <- (T + V)
+FIM
+INÍCIO
+	Escreva ("entre com dois números:");
+	Leia (T, V)
+	Soma
+FIM
+
+**FUNÇÃO**
+
+São muito parecidas como os procedimentos, mas têm a particularidade especial de retornar ao programa que as chamou um valor ligado ao seu nome.
+
+**VARIÁVEIS GLOBAIS E VARIÁVEIS LOCAIS**
+
+As variáveis declaradas no início do algoritmo são chamadas de globais. Elas são consideradas visíveis, pois podem ser usadas no algoritmo principal e também por todos os subalgoritmos.
+Já as variáveis que são declaradas no início de um subalgoritmo são chamadas de locais, podendo ser usadas dentro do subalgoritmo que as declarou. Nunca são usadas por outro subalgoritmo ou pelo algoritmo principal. É aceitável determinar variáveis globais e locais usando o mesmo nome, sendo que qualquer alteração na variável local não comprometerá o conteúdo da variável global.
+
+**PARÂMETROS**
+
+Utiliza-se quando se quer escrever um subalgoritmo que seja possivelmente o mais genérico. Parâmetros são caminhos onde se constitui uma comunicação bidirecional entre um subalgoritmo e o algoritmo chamador.
+Exemplo:
+
+ALGORITMO Parâmetros
+
+VAR
+	D: real
+
+FUNÇÃO Média (A, B: real) : real
+
+INÍCIO
+	retorna (A + B) / 2
+FIM
+INÍCIO
+	D <- Media (5, 7)
+
+	Escreva "Média é igual a ", D
+FIM
+
+Neste caso A e B são parâmetros formais da função "Média", enquanto 5 e 7 são parâmetros reais do algoritmo principal que substituirão A e B quando da chamada da função "Média".
+
+**PASSAGEM DE PARÂMETROS POR VALOR**
+
+As mudanças ocorrem nos parâmetros formais, dentro do subprograma, e não se refletem nos parâmetros reais.
+Parâmetros formais são de grande utilidade apenas na determinação do subalgoritmo; já os parâmetros reias substituem-nos a cada chamada do subalgoritmo. Os parâmetros reias podem ser diferentes a cada chamada de um subalgoritmo.
+	--- Parâmetros formais são nomes simbólicos colocados no cabeçalho de subalgoritmos. Da mesma maneira como se trabalha com variáveis globais e locais dentro de um subalgoritmo, trabalha-se com os parâmetros formais.
+
+**PASSAGEM DE PARÂMETROS POR REFERÊNCIA**
+
+Toda mudança realizada em um parâmetro formal corresponde à mesma mudança realizada no seu parâmetro real associado. Sendo assim, quando a passagem é por referência, isto quer dizer que o parâmetro é de "entrada-saída" e o de valor é apenas de entrada.
+	--- Parâmetros reais são aqueles que trocam os parâmetros formais quando existe a chamada de um subalgoritmo.
